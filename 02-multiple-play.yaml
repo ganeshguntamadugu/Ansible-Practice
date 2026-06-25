@@ -1,6 +1,14 @@
 #Play 1 Printing default message
-- name: Play 1
+- name: Play-1
   hosts: web
   tasks: 
-  - name: Play 1 Task 1
+  - name: Play-1 Task-1
     ansible.builtin.debug:
+
+#Play 2 Printing specific message
+- name: Play-21
+  hosts: web
+  tasks:
+  - name: Play-2 Task-1
+    ansible.built.debug:
+      msg: "Printing some text"
