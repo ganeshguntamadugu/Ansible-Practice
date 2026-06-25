@@ -1,0 +1,27 @@
+#Installing nginx
+- name: nginx installation and start the service
+  hostes: web
+  tasks:
+  - name: nginx installation
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - name: starting and enabling the service 
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
+  
+#Installing MySQL
+- name: mysql installation and start the service
+  hostes: web
+  tasks: 
+  - name: mysql installation
+    ansible.builtin.package:
+      name: mysql
+      state: present
+  - name: starting and enabling the service
+    ansible.builtin.service:
+      name: mysql 
+      state: started
+      enabled: yes
