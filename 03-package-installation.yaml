@@ -1,6 +1,6 @@
 #Installing nginx
 - name: nginx installation and start the service
-  hostes: web
+  hosts: web
   tasks:
   - name: nginx installation
     ansible.builtin.package:
@@ -14,7 +14,7 @@
   
 #Installing MySQL
 - name: mysql installation and start the service
-  hostes: web
+  hosts: web
   tasks: 
   - name: mysql installation
     ansible.builtin.package:
