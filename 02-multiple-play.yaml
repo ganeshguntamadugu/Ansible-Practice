@@ -6,9 +6,9 @@
     ansible.builtin.debug:
 
 #Play 2 Printing specific message
-- name: Play-21
+- name: Play-2
   hosts: web
   tasks:
   - name: Play-2 Task-1
-    ansible.built.debug:
+    ansible.builtin.debug:
       msg: "Printing some text"
