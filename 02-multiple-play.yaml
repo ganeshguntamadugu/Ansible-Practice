@@ -1,0 +1,6 @@
+#Play 1 Printing default message
+- name: Play 1
+  hosts: web
+  tasks: 
+  -name: Play 1 Task 1
+   ansible.builtin.debug 
