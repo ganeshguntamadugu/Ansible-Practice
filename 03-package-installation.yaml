@@ -1,13 +1,14 @@
 #Installing nginx
 - name: nginx installation and start the service
   hosts: web
+  become: yes #getting the root access
   tasks:
   - name: nginx installation
-    ansible.builtin.package:
+    ansible.builtin.package: #module to install the package
       name: nginx
       state: present
   - name: starting and enabling the service 
-    ansible.builtin.service:
+    ansible.builtin.service: #module to start the service
       name: nginx
       state: started
       enabled: yes
@@ -15,6 +16,7 @@
 #Installing MySQL
 - name: mysql installation and start the service
   hosts: web
+  become: yes
   tasks: 
   - name: mysql installation
     ansible.builtin.package:
