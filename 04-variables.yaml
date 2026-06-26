@@ -1,0 +1,6 @@
+- name: Variables
+  hosts: web
+  tasks:
+  - name: some informaton
+    ansible.builtin.debug:
+      msg: "Hi I'm Ganesh, 24 years old completed my Graduation"
