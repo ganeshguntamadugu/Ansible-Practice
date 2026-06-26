@@ -3,10 +3,13 @@
   vars_prompt:
   - name: peru
     prompt: Please enter the name
+    private: false #By default prompt is confidential
   - name: age
     prompt: Please enter the age
+    private: false #By default prompt is confidential
   - name: education
     prompt: Please enter the education details
+    private: false #By default prompt is confidential
   tasks: 
     - name: Information 5 Vars through prompt
       ansible.builtin.debug:
