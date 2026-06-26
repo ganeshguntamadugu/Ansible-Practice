@@ -20,7 +20,7 @@
   tasks: 
   - name: mysql installation
     ansible.builtin.package:
-      name: mysql-server
+      name: mysql
       state: present
   - name: starting and enabling the service
     ansible.builtin.service:
