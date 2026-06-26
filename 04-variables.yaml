@@ -1,14 +1,22 @@
 - name: Variables
   hosts: web
-  vars:
+  vars: #Declaring vars in Play level
     peru: "Swapna"
     age: "27"
-    education: Post Graduation
+    education: "Post Graduation"
   tasks:
   - name: Informaton 1
     ansible.builtin.debug:
       msg: "Hi I'm Ganesh, 24 years old completed my Graduation"
 
   - name: Information 2
+    ansible.builtin.debug:
+      msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
+
+  - name: Information 3
+    vars: #Declaring vars in task level
+      peru: "Narendra"
+      age: "51"
+      education: "10th"
     ansible.builtin.debug:
       msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
