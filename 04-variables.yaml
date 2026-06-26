@@ -1,22 +1,28 @@
 - name: Variables
   hosts: web
+  vars_files: #Declaring vars through files
+  - vars.yaml
   vars: #Declaring vars in Play level
     peru: "Swapna"
     age: "27"
     education: "Post Graduation"
   tasks:
-  - name: Informaton 1
+  - name: Informaton 1 #Normal
     ansible.builtin.debug:
       msg: "Hi I'm Ganesh, 24 years old completed my Graduation"
 
-  - name: Information 2
+  - name: Information 2 #Through Play level vars
     ansible.builtin.debug:
       msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
 
-  - name: Information 3
+  - name: Information 3 #Through task level vars
     vars: #Declaring vars in task level
       peru: "Narendra"
       age: "51"
       education: "10th"
+    ansible.builtin.debug:
+      msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
+
+  - name: Information 4 #Through files vars
     ansible.builtin.debug:
       msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
