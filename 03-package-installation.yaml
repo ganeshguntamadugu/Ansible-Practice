@@ -14,13 +14,13 @@
       enabled: yes
   
 #Installing MySQL
-- name: mysql installation and start the service
+- name: mysql-server installation and start the service
   hosts: web
   become: yes
   tasks: 
-  - name: mysql installation
+  - name: mysql-server installation
     ansible.builtin.package:
-      name: mysql
+      name: mysql-server
       state: present
   - name: starting and enabling the service
     ansible.builtin.service:
