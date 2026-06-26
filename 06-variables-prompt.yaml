@@ -8,6 +8,6 @@
   - name: education
     prompt: Please enter the education details
   tasks: 
-    - name: Information 5 Through prompt
+    - name: Information 5 Vars through prompt
       ansible.builtin.debug:
         msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"

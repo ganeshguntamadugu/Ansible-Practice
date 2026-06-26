@@ -9,11 +9,11 @@
     ansible.builtin.debug:
       msg: "Hi I'm Ganesh, 24 years old completed my Graduation"
 
-  - name: Information 2 Through Play level vars
+  - name: Information 2 Vars through Play level 
     ansible.builtin.debug:
       msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
 
-  - name: Information 3 Through task level vars
+  - name: Information 3 Vars through task level 
     vars: #Declaring vars in task level
       peru: "Narendra"
       age: "51"
