@@ -1,7 +1,5 @@
 - name: Variables
   hosts: web
-  vars_files: #Declaring vars through files
-  - vars.yaml
   vars: #Declaring vars in Play level
     peru: "Swapna"
     age: "27"

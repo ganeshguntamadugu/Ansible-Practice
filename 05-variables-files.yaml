@@ -1,6 +1,6 @@
 - name: Variables
   hosts: web
-  vars_files:
+  vars_files: #Declaring vars through files
   - vars.yaml
   tasks:
   - name: Information 4 #Through files vars
