@@ -3,7 +3,7 @@
   hosts: web
   tasks: 
   - name: Play-1 Task-1
-    ansible.builtin.debug:
+    ansible.builtin.debug: #To print something
 
 #Play 2 Printing specific message
 - name: Play-2
