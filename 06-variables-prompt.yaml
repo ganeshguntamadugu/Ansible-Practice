@@ -1,0 +1,13 @@
+- name: Variables
+  hosts: web
+  vars_prompt:
+  - name: peru
+    prompt: Please enter the name
+  - name: age
+    prompt: Please enter the age
+  - name: education
+    prompt: Please enter the education details
+  tasks: 
+    - name: Information 5 Through prompt
+      ansible.builtin.debug:
+        msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"

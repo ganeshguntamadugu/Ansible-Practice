@@ -5,15 +5,15 @@
     age: "27"
     education: "Post Graduation"
   tasks:
-  - name: Informaton 1 #Normal
+  - name: Informaton 1 Normal way
     ansible.builtin.debug:
       msg: "Hi I'm Ganesh, 24 years old completed my Graduation"
 
-  - name: Information 2 #Through Play level vars
+  - name: Information 2 Through Play level vars
     ansible.builtin.debug:
       msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
 
-  - name: Information 3 #Through task level vars
+  - name: Information 3 Through task level vars
     vars: #Declaring vars in task level
       peru: "Narendra"
       age: "51"
