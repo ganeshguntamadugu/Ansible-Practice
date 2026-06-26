@@ -1,0 +1,6 @@
+- name: Variables
+  hosts: web
+  tasks:
+  - name: Informaton 6 Vars through inventory file
+    ansible.builtin.debug:
+      msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
