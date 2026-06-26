@@ -1,6 +1,14 @@
 - name: Variables
   hosts: web
+  vars:
+    name: "Swapna"
+    age: "27"
+    education: Post Graduation
   tasks:
-  - name: some informaton
+  - name: Informaton 1
     ansible.builtin.debug:
       msg: "Hi I'm Ganesh, 24 years old completed my Graduation"
+
+  - name: Information 2
+    ansible.builtin.debug:
+      msg: "Hi I'm {{name}}, {{age}} years old completed my {{education}}"
