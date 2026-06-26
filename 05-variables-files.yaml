@@ -1,0 +1,8 @@
+- name: Variables
+  hosts: web
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: Information 4 #Through files vars
+    ansible.builtin.debug:
+      msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
