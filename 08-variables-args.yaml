@@ -4,3 +4,6 @@
   - name: Information 7 Vars through arguments
     ansible.builtin.debug:
       msg: "Hi I'm {{peru}}, {{age}} years old completed my {{education}}"
+
+#commend to pass the arguments
+#ansible-playbook -i <inventory.file> -e ansible_user=<user-name> -e ansible_password=<password> <playbook-file> -e "peru=Ganesh age=24 education=Graduate"
