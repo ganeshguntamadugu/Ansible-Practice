@@ -1,5 +1,6 @@
 - name: Datatypes
-  hosts: localhost
+  hosts: local
+  connection: local #when connecting to local host
   vars:
     peru: "Ganesh" #string
     age: 24 #int
