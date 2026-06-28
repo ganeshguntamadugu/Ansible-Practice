@@ -1,0 +1,21 @@
+- name: Datatypes
+  hosts: localhost
+  vars:
+    peru: "Ganesh" #string
+    age: 24 #int
+    hobbies: #list
+      - playing
+      - watching movies
+      - walking
+      - running
+    male: true #boolean
+    education: #map/dictionary
+      tenth: Sri Chaithanya
+      inter: Narayana # again this is string
+      btech: Saveetha
+      branch: # again this is list
+       - ECE
+  tasks:
+    - name: My details
+      ansible.builtin.debug:
+      msg: "My name is {{peru}}, {{age}} years old completed my 10th at {{tenth}} studies intermediat at {{inter}, went to {{btech}} and joined {{ECE}}"
