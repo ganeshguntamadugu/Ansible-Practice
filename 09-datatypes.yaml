@@ -18,4 +18,4 @@
   tasks:
     - name: My details
       ansible.builtin.debug:
-      msg: "My name is {{peru}}, {{age}} years old completed my 10th at {{tenth}} studies intermediat at {{inter}, went to {{btech}} and joined {{ECE}}"
+        msg: "My name is {{peru}}, {{age}} years old completed my 10th at {{tenth}} studies intermediat at {{inter}, went to {{btech}} and joined {{ECE}}"
