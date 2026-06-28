@@ -1,5 +1,6 @@
 - name: Variables
   hosts: local
+  connection: local
   vars_files: #Declaring vars through files
   - vars.yaml
   tasks:
