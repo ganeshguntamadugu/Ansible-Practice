@@ -22,4 +22,4 @@
         msg: "My name is {{peru}}, {{age}} years old completed my 10th at {{education.tenth}}, studies intermediat at {{education.inter}}, went to {{education.btech}} and joined {{education.branch[0]}}"
     - name: To call list & dictionary
       ansible.builtin.debug:
-        msg: "My {{hobbies}} and My {{education}}"
+        msg: "My list of hobbies {{hobbies}} and My dictionary of education {{education}}"
