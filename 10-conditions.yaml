@@ -31,4 +31,4 @@
 
     - name: To create user expense
       ansible.builtin.command: useradd expense
-      when: rc != 0
+      when: user.rc != 0
