@@ -1,5 +1,5 @@
 - name: To check given number is greater or lesser
-  hosts: localhost
+  hosts: web
   become: yes #getting the root access
   vars_prompt:
     - name : number #By default prompt consider anything as string
@@ -35,7 +35,7 @@
     #   when: USER.rc != 0
 
 #Another way to create a user
-    - name: To check user expense in another way
+    - name: To create user expense in another way
       ansible.builtin.user:
         name: expense
         state: present
