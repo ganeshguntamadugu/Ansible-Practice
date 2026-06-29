@@ -2,7 +2,7 @@
   hosts: localhost
   vars_prompt:
     - name : number
-      prompt: "Please enter a number:"
+      prompt: Please enter a number
       private: false #By default prompt is confidential it won't show content we entered
   tasks:
     - name: Print this if number is greater than or equal to 10
