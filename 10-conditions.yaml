@@ -1,5 +1,6 @@
 - name: To check given number is greater or lesser
   hosts: localhost
+  become: yes #getting the root access
   vars_prompt:
     - name : number #By default prompt consider anything as string
       prompt: Please enter a number
