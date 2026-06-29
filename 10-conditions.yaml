@@ -1,16 +1,19 @@
 - name: To check given number is greater or lesser
   hosts: localhost
   vars_prompt:
-    - name : number
+    - name : number #By default prompt consider anything as string
       prompt: Please enter a number
       private: false #By default prompt is confidential it won't show content we entered
+
+  vars: 
+    number: 26 # Here it is clearly a number
   tasks:
     - name: Print this if number is greater than or equal to 10
       ansible.builtin.debug:
         msg: "Given number {{number}} is greater than or equal to 10"
-      when: number >= 10 #Expression
+      when: number | int >= 10 #Conditional Expression #Here int declares the number
 
     - name: Print this if number is less than 10
       ansible.builtin.debug:
         msg: "Given number {{number}} is less than 10"
-      when: number < 10 #Expression
+      when: number | int < 10 #Conditional Expression #Here int declares the number
