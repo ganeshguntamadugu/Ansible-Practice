@@ -18,10 +18,10 @@
         name: "{{item}}"
         state: present
       loop:
-        - {name: mysql, state: present}
+        - {name: mysql, state: present, enabled: yes}
         - {name: nginx, state: absent}
-        - {name: git, state: present}
-        - {name: httpd, state: present}
-        - {name: nginx, state: present}
+        - {name: git, state: present, enabled: yes}
+        - {name: httpd, state: absent}
+        - {name: nginx, state: present, enabled: yes}
        
         
