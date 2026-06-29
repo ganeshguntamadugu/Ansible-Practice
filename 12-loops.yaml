@@ -1,0 +1,13 @@
+- name: Loops Practice
+  hostes: web
+  tasks:
+    - name: Printing names
+      ansible.builtin.debug:
+        msg: "Hello {{item}}}"
+      gana:
+        - Ganesh
+        - Bhanu
+        - Swapna
+        - Amrutha
+        - Narendra
+        - Vibha

@@ -6,14 +6,21 @@
       ansible.builtin.debug:
         msg: "{{ansible_facts}}"
 
-    - name: Install package for RedHat
+    - name: Install nginx for RedHat
       ansible.builtin.dnf:
         name: nginx
         state: present
       when: ansible_os_family == "RedHat"
 
-    - name: Install package for 
+    - name: Install nginx for Ubuntu
       ansible.builtin.apt:
         name: nginx
         state: present
       when: ansible_os_family == "Ubuntu"
+
+    #Or we can use module package
+    - name: Install nginx using module package
+      ansible.builtin.package:
+        name: nginx
+        state: present
+      
