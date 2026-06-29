@@ -5,8 +5,8 @@
       prompt: Please enter a number
       private: false #By default prompt is confidential it won't show content we entered
 
-  vars: 
-    number: 26 # Here it is clearly a number
+  # vars: 
+  #   number: 26 # Here it is clearly a number
   tasks:
     - name: Print this if number is greater than or equal to 10
       ansible.builtin.debug:
@@ -17,3 +17,16 @@
       ansible.builtin.debug:
         msg: "Given number {{number}} is less than 10"
       when: number | int < 10 #Conditional Expression #Here int declares the number
+
+#To check and create a user
+
+    - name: To check user expense
+      ansible.builtin.command: id expense #To use direct linux commands if module not available
+      register: USER #Here USER is a variable that gets output from above command
+
+    - name: Print the USER information
+      ansible.builtin.debug:
+        msg: "user info: {{USER}}"
+
+    # - name: To create user expense
+    #   ansible.builtin.command: useradd expense
