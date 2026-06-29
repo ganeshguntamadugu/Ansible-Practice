@@ -15,13 +15,14 @@
     #Loops in advance way
     - name: Loops in another way
       ansible.builtin.package:
-        name: "{{item}}"
-        state: present
+        name: "{{item.name}}"
+        state: "{{item.state}}"
+        enabled: "{{item.enabled}}"
       loop:
-        - {name: mysql, state: present}
+        - {name: mysql, state: present, enabled: true}
         - {name: nginx, state: absent}
-        - {name: git, state: present}
+        - {name: git, state: present, enabled: true}
         - {name: httpd, state: absent}
-        - {name: nginx, state: present}
+        - {name: nginx, state: present, enabled: true}
        
         
