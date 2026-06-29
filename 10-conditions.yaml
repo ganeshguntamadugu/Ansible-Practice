@@ -21,15 +21,21 @@
 
 #To check and create a user
 
-    - name: To check user expense
-      ansible.builtin.command: id expense #To use direct linux commands if module not available
-      register: USER #Here USER is a variable that gets output from above command
-      ignore_errors: true
+    # - name: To check user expense
+    #   ansible.builtin.command: id expense #To use direct linux commands if module not available
+    #   register: USER #Here USER is a variable that gets output from above command
+    #   ignore_errors: true
 
-    - name: Print the USER information
-      ansible.builtin.debug:
-        msg: "user info: {{USER}}"
+    # - name: Print the USER information
+    #   ansible.builtin.debug:
+    #     msg: "user info: {{USER}}"
 
-    - name: To create user expense
-      ansible.builtin.command: useradd expense
-      when: USER.rc != 0
+    # - name: To create user expense
+    #   ansible.builtin.command: useradd expense
+    #   when: USER.rc != 0
+
+#Another way to create a user
+    - name: To check user expense in another way
+      ansible.builtin.user:
+        name: expense
+        state: present
