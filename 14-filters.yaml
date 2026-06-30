@@ -1,5 +1,6 @@
 - name: Functions or Filters
   hosts: local
+  connection: local
   tasks:
     - name: Printing the default Variable
       ansible.builtin.debug:
