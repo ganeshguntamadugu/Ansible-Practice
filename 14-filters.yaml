@@ -5,3 +5,6 @@
     - name: Printing the default Variable
       ansible.builtin.debug:
         msg: "Hello {{peru | default('Ganesh')}}"
+    - name: Printing the default Variable
+      ansible.builtin.debug:
+        msg: "Hello {{age | default(24)}}"
