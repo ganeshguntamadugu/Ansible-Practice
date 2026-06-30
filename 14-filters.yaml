@@ -30,3 +30,21 @@
         numbers: [1,2,5,7,89,45,3,45,3,2,6]
       ansible.builtin.debug:
         msg: "Min: {{numbers | min}} Max: {{numbers | max}}" #Here min and max are a functions
+
+    - name: Convert to dictionary to list
+      vars:
+        details:
+          peru: "Ganesh"
+          age: 24
+          education: "Graduate"
+        ansible.builtin.debug:
+          msg: "{{details | dict2items}}"
+
+    # - name: Convert to dictionary to list
+    #   vars:
+    #     details:
+    #     - {"key":"peru" "Ganesh"}
+    #       - age: 24
+    #       education: "Graduate"
+    #     ansible.builtin.debug:
+    #       msg: "{{details | items2dict}}"
