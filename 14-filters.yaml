@@ -53,4 +53,4 @@
       vars:
         my_ip: 129.2.8.900
       ansible.builtin.debug:
-        msg: "{{my_ip | ansible.utils.ipv4}}"
+        msg: "{{my_ip | ansible.utils.ipv4}}" #Here ansible.utils.ipv4 is a function
