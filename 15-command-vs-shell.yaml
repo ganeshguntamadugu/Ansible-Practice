@@ -5,6 +5,7 @@
     - name: Execute the command
       ansible.builtin.command: ls -l > /tmp/output.txt #Command won't execute because, command excutes only simple commands
       register: output
+      ignore_errors: true
     - name: output
       ansible.builtin.debug:
 
