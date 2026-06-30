@@ -4,7 +4,11 @@
   tasks:
     - name: Printing the default Variable
       ansible.builtin.debug:
-        msg: "Hello {{peru | default('Ganesh')}}"
-    - name: Printing the default Variable
+        msg: "Hello {{peru | default('Ganesh')}}" #Here default is function
+        msg: "Hello {{age | default(24)}}" #If its a number 
+    
+    - name: Convert to Uppercase
+      vars:
+        education: "Graduate"
       ansible.builtin.debug:
-        msg: "Hello {{age | default(24)}}"
+        msg: "Hello {{education | upper)}}" #Here upper is function
