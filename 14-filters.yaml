@@ -37,7 +37,7 @@
           peru: "Ganesh"
           age: 24
           education: "Graduate"
-        ansible.builtin.debug:
+      ansible.builtin.debug:
           msg: "{{details | dict2items}}"
 
     # - name: Convert to dictionary to list
