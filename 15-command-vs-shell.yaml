@@ -1,9 +1,15 @@
-- name: Command vs Shell
+- name: Command vs Shell #Command is secure than Shell, prefer to use command if works
   hosts: local
   connection: local
   tasks:
     - name: Execute the command
-      ansible.builtin.command: ls -l > /tmp/output.txt
+      ansible.builtin.command: ls -l > /tmp/output.txt #Command won't execute because, command excutes only simple commands
+      register: output
+    - name: output
+      ansible.builtin.debug:
+
+    - name: Execute the shell
+      ansible.builtin.shell: ls -l > /tmp/output.txt #Shell execute because, shell login to the server and excute commands inside
       register: output
     - name: output
       ansible.builtin.debug:
