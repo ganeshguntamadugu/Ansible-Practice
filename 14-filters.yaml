@@ -12,3 +12,9 @@
         education: "Graduation"
       ansible.builtin.debug:
         msg: "I completed my {{education | upper}}" #Here "upper" is function
+
+    - name: Convert to Lowercase
+      vars:
+        native: "Naidupeta"
+      ansible.builtin.debug:
+        msg: "I'm from {{native | lower}}" #Here "lower" is function
