@@ -40,11 +40,11 @@
       ansible.builtin.debug:
           msg: "{{details | dict2items}}"
 
-    # - name: Convert to dictionary to list
-    #   vars:
-    #     details:
-    #     - {"key":"peru" "Ganesh"}
-    #       - age: 24
-    #       education: "Graduate"
-    #     ansible.builtin.debug:
-    #       msg: "{{details | items2dict}}"
+    - name: Convert to dictionary to list
+      vars:
+        details:
+        - {"key":"peru", "value":"Ganesh"}
+        - {"key":age, "value":24}
+        - {"key":"education", "value":"Graduate"}
+      ansible.builtin.debug:
+          msg: "{{details | items2dict}}"
