@@ -4,17 +4,23 @@
   tasks:
     - name: Printing the default Variable
       ansible.builtin.debug:
-        msg: "Hello {{peru | default('Ganesh')}}" #Here "default" is function
+        msg: "Hello {{peru | default('Ganesh')}}" #Here "default" is a function
         #msg: "Hello {{age | default(24)}}" #If its a number 
     
     - name: Convert to Uppercase
       vars:
         education: "Graduation"
       ansible.builtin.debug:
-        msg: "I completed my {{education | upper}}" #Here "upper" is function
+        msg: "I completed my {{education | upper}}" #Here "upper" is a function
 
     - name: Convert to Lowercase
       vars:
         native: "Naidupeta"
       ansible.builtin.debug:
-        msg: "I'm from {{native | lower}}" #Here "lower" is function
+        msg: "I'm from {{native | lower}}" #Here "lower" is a function
+
+    - name: Get the Unique numbers
+      vars:
+        numbers: [1,2,5,7,89,45,3,45,3,2,6]
+      ansible.builtin.debug:
+        msg: "Unique numbers are {{numbers | unique}}" #Here "unique" is a function
