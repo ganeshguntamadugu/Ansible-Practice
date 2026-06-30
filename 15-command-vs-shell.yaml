@@ -3,7 +3,7 @@
   connection: local
   tasks:
     - name: Execute the command
-      ansible.builtin.command: ls -l > /tmp/output.txt #Command won't execute because, command excutes only simple commands
+      ansible.builtin.command: ls -l > /tmp/output.txt #It won't execute because, command executes only simple commands
       register: output
       ignore_errors: true
     - name: output
@@ -11,7 +11,7 @@
         msg: "Above result: {{output}}"
 
     - name: Execute the shell
-      ansible.builtin.shell: ls -l > /tmp/output.txt #Shell execute because, shell login to the server and excute commands inside
+      ansible.builtin.shell: ls -l > /tmp/output.txt #It will execute because, shell login to the server and execute commands inside
       register: output
     - name: output
       ansible.builtin.debug:
