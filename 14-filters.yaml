@@ -31,20 +31,26 @@
       ansible.builtin.debug:
         msg: "Min: {{numbers | min}} Max: {{numbers | max}}" #Here min and max are a functions
 
-    - name: Convert to dictionary to list
+    - name: Convert dictionary to list
       vars:
         details:
           peru: "Ganesh"
           age: 24
           education: "Graduate"
       ansible.builtin.debug:
-          msg: "{{details | dict2items}}"
+          msg: "{{details | dict2items}}" #Here dict2items is a function
 
-    - name: Convert to dictionary to list
+    - name: Convert list to dictionary
       vars:
         details:
         - {"key":"peru", "value":"Ganesh"}
         - {"key":age, "value":24}
         - {"key":"education", "value":"Graduate"}
       ansible.builtin.debug:
-          msg: "{{details | items2dict}}"
+          msg: "{{details | items2dict}}" #Here items2dict is a function
+
+    - name: Check for valid ip address
+      vars:
+        my_ip: 129.2.8.9
+      ansible.builtin.debug:
+        msg: "{{my_ip | ansible.util.ipv4}}"
